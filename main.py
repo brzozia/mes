@@ -113,7 +113,6 @@ def result_template(shapes, coef, x):
     value = 0
     for i in range(len(shapes)):
         value += coef[i]*shapes[i](x)
-    value += u1
     return value
 
 final_func = partial(result_template, shape_functions, res)
